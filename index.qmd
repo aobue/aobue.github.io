@@ -13,7 +13,6 @@ title: ""
 ::: {.social-links}
 [GitHub](https://github.com/aobue){.btn}
 [LinkedIn](https://linkedin.com/in/alex-bue){.btn}
-[Email](mailto:your.email@example.com){.btn}
 :::
 :::
 :::
