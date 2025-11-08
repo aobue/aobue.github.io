@@ -1,24 +1,19 @@
 ---
-title: "Hi, I'm Alex"
-page-layout: article
+title: ""
 ---
 
-## Welcome to My Portfolio
+::: {.profile-header}
+::: {.profile-image}
+![](headshot.jpg)
+:::
 
-I'm a [Your Role/Title] passionate about [your interests/field].
+::: {.profile-info}
+# Alex Bue
 
-This portfolio showcases my work in [key areas]. I enjoy working with [technologies/tools] and solving [types of problems].
-
-### What I Do
-
-- [Key skill or area of expertise 1]
-- [Key skill or area of expertise 2]
-- [Key skill or area of expertise 3]
-
-### Recent Work
-
-Check out my [Projects](projects.qmd) page to see what I've been working on recently.
-
-### Get in Touch
-
-Feel free to connect with me on [GitHub](https://github.com/yourusername) or [LinkedIn](https://linkedin.com/in/yourprofile).
+::: {.social-links}
+[GitHub](https://github.com/aobue){.btn}
+[LinkedIn](https://linkedin.com/in/alex-bue){.btn}
+[Email](mailto:your.email@example.com){.btn}
+:::
+:::
+:::
