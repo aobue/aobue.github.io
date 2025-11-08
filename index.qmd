@@ -1,0 +1,24 @@
+---
+title: "Hi, I'm Alex"
+page-layout: article
+---
+
+## Welcome to My Portfolio
+
+I'm a [Your Role/Title] passionate about [your interests/field].
+
+This portfolio showcases my work in [key areas]. I enjoy working with [technologies/tools] and solving [types of problems].
+
+### What I Do
+
+- [Key skill or area of expertise 1]
+- [Key skill or area of expertise 2]
+- [Key skill or area of expertise 3]
+
+### Recent Work
+
+Check out my [Projects](projects.qmd) page to see what I've been working on recently.
+
+### Get in Touch
+
+Feel free to connect with me on [GitHub](https://github.com/yourusername) or [LinkedIn](https://linkedin.com/in/yourprofile).

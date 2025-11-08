@@ -1,0 +1,21 @@
+title: "Alex Olaf Bue"
+project:
+  type: website
+  output-dir: _site
+
+website:
+  site-url: https://aobue.github.io/portfolio
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Projects
+        href: projects.qmd
+      - text: About
+        href: about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.scss
+    toc: true
