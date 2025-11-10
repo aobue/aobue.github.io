@@ -20,7 +20,7 @@ title: "Alex Bue"
 I'm a graduate student studying data science and international development at Stanford. Previously I earned my MBA from the University of Chicago as an Edwardson Civic Scholar. I used to work in homeless services and more recently was a consulting data scientist in the World Bank Group's Department for Outcomes. I'm interested in using technology and statistics to make humanitarian and development assistance more effective.
 
 ## Projects
-- **Outcomes Target Map** - Built organization-wide dashboard in R Shiny to help track development targets across country portfolios
+- **Outcomes Target Map** - Built organization-wide dashboard in R Shiny to help World Bank Group track development targets across country portfolios
 
 - **[Illegal Mining Detection in Ghana](link-to-project)** - Trained machine learning model on satellite imagery to identify informal mining sites; integrated licensing data and local governance information to map regulatory gaps
 
