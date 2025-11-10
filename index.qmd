@@ -17,13 +17,18 @@ title: ""
 :::
 
 ::: {.right-column}
-Write your introduction here. Tell people who you are and what you do.
+I'm a graduate student studying data science and international development at Stanford. Previously I earned my MBA from the University of Chicago as an Edwardson Civic Scholar. I used to work in homeless services and more recently was a consulting data scientist in the World Bank Group's Department for Outcomes. I'm interested in using technology and statistics to make humanitarian and development assistance more effective.
 
 ## Projects
+- **[Outcomes Target Map](link-to-project)** - Built organization-wide dashboard in R Shiny for the World Bank Group's Department for Outcomes to track development targets across country portfolios
 
-- **[Project Name](link-to-project)** - Brief description of the project
-- **[Project Name](link-to-project)** - Brief description of the project
-- **[Project Name](link-to-project)** - Brief description of the project
+- **[Illegal Mining Detection in Ghana](link-to-project)** - Trained machine learning model on satellite imagery to identify informal mining sites; integrated licensing data and local governance information to map regulatory gaps
+
+- **[Renewable Energy Attitudes in Germany](link-to-project)** - Harmonizing four decades of German survey data (1980-2021) to analyze hyperlocal attitudes toward renewable energy development, accounting for territorial reforms and administrative boundary changes (in progress)
+
+- **[Testing Modernization Theory with Asia Barometer](link-to-project)** - Statistical analysis of survey data across eight Asian countries examining relationships between economic development and democratic attitudes (in progress)
+
+- **[Computer Vision for Homelessness](link-to-project)** - Developing satellite image classification system to detect unsheltered homelessness in San Francisco using Planet.com imagery (in progress)
 
 :::
 :::
