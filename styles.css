@@ -25,7 +25,11 @@ body {
 }
 
 .profile-image {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#title-block-header {
+  display: none;
 }
 
 .profile-image img {
@@ -106,7 +110,7 @@ body {
 
 .right-column a {
   color: #6ba4e7;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .right-column a:hover {

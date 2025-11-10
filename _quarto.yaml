@@ -12,3 +12,4 @@ format:
     css: styles.css
     toc: false
     page-layout: full
+    title-block-banner: false
