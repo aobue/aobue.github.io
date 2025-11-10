@@ -8,6 +8,8 @@ title: "Alex Bue"
 ![](headshot.jpg)
 :::
 
+# Alex Bue
+
 ::: {.social-links}
 [GitHub](https://github.com/aobue)
 [LinkedIn](https://linkedin.com/in/alex-bue)
