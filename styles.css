@@ -28,8 +28,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
-#title-block-header {
-  display: none;
+#title-block-header,
+.quarto-title-block,
+header#title-block-header {
+  display: none !important;
 }
 
 .profile-image img {
