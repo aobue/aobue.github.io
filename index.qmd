@@ -24,11 +24,12 @@ I'm a graduate student studying data science and international development at St
 
 - **[Illegal Mining Detection in Ghana](link-to-project)** - Trained machine learning model on satellite imagery to identify informal mining sites; integrated licensing data and local governance information to map regulatory gaps
 
+- **Computer Vision for Homeless Services** - Developing satellite image classification system to detect unsheltered homelessness in San Francisco using Planet.com imagery (in progress)
+
 - **Renewable Energy Attitudes in Germany** - Harmonizing four decades of German survey data (1980-2021) to analyze hyperlocal attitudes toward renewable energy development, accounting for territorial reforms and administrative boundary changes (in progress)
 
 - **Testing Modernization Theory with Asia Barometer** - Statistical analysis of survey data across eight Asian countries examining relationships between economic development and democratic attitudes (in progress)
 
-- **Computer Vision for Homeless Services** - Developing satellite image classification system to detect unsheltered homelessness in San Francisco using Planet.com imagery (in progress)
 
 :::
 :::
