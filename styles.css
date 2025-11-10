@@ -24,7 +24,7 @@ body {
 }
 
 .profile-image {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .profile-image img {
@@ -65,7 +65,7 @@ body {
 }
 
 .right-column {
-  padding: 4rem 6rem 4rem 4rem;
+  padding: 4rem 3rem 4rem 3rem;
   font-size: 1.15rem;
   max-width: 800px;
 }
