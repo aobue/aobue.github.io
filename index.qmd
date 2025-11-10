@@ -8,8 +8,6 @@ title: "Alex Bue"
 ![](headshot.jpg)
 :::
 
-# Alex Bue
-
 ::: {.social-links}
 [GitHub](https://github.com/aobue)
 [LinkedIn](https://linkedin.com/in/alex-bue)
@@ -28,7 +26,7 @@ I'm a graduate student studying data science and international development at St
 
 - **Testing Modernization Theory with Asia Barometer** - Statistical analysis of survey data across eight Asian countries examining relationships between economic development and democratic attitudes (in progress)
 
-- **Computer Vision for Homelessness** - Developing satellite image classification system to detect unsheltered homelessness in San Francisco using Planet.com imagery (in progress)
+- **Computer Vision for Homeless Services** - Developing satellite image classification system to detect unsheltered homelessness in San Francisco using Planet.com imagery (in progress)
 
 :::
 :::
