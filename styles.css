@@ -28,9 +28,10 @@ body {
   margin-bottom: 0rem;
 }
 
-#title-block-header,
-.quarto-title-block,
-header#title-block-header {
+.container ~ #title-block-header,
+body:has(.container) #title-block-header,
+body:has(.container) .quarto-title-block,
+body:has(.container) header#title-block-header {
   display: none !important;
 }
 
