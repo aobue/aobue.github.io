@@ -3,6 +3,7 @@ title: "Does Emergency Rental Assistance Prevent Homelessness?"
 author: "Alex Bue"
 date: "2026-02-01"
 description: "A critical look at San Francisco's ERAP impact evaluation and what it means for a program to 'work.'"
+title-block-banner: true
 format: html
 ---
 
