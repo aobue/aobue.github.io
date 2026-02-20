@@ -2,8 +2,6 @@
 title: "Housing Investments ≠ Homelessness Reductions"
 author: "Alex Bue"
 date: "2025-12-31"
-description: "A statistical critique of Alameda County's claim that housing investments caused a drop in homelessness."
-title-block-banner: true
 format: html
 ---
 
