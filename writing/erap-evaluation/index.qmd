@@ -1,6 +1,5 @@
 ---
 title: "Does Emergency Rental Assistance Prevent Homelessness?"
-author: "Alex Bue"
 date: "2026-02-01"
 format: html
 ---

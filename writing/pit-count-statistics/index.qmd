@@ -1,6 +1,5 @@
 ---
 title: "Housing Investments ≠ Homelessness Reductions"
-author: "Alex Bue"
 date: "2025-12-31"
 format: html
 ---

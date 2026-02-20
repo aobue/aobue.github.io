@@ -5,6 +5,10 @@ project:
 
 website:
   site-url: https://aobue.github.io
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
 
 format:
   html:
