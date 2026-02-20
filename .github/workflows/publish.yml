@@ -35,7 +35,7 @@ jobs:
             any::rmarkdown
             any::ggplot2
             any::dplyr
-            any::plotly
+            any::patchwork
 
       - name: Render Quarto Project
         run: quarto render

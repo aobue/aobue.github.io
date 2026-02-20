@@ -13,7 +13,7 @@ Jonathan Russell, Director of Housing and Homelessness for Alameda County, is co
 
 ## The claim
 
-![Russell's LinkedIn post claiming housing investments caused homelessness reductions](russell-post.png)
+![Russell's LinkedIn post claiming housing investments caused homelessness reductions](russell-post.png){width=450}
 
 But two things would need to be true for Russell's argument to hold. First, the PIT decrease must be larger than we'd expect by chance. Second, if it is, then the decrease must have been caused by spending and not something else.
 
@@ -129,7 +129,8 @@ $$
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 library(ggplot2)
-library(plotly)
+library(dplyr)
+library(patchwork)
 
 # Observed counts
 x_2022 <- 9747
@@ -164,54 +165,73 @@ df <- data.frame(
 crossover_05 <- df$uncounted[which.min(abs(df$p_value - 0.05))]
 crossover_05_pct <- 100 * crossover_05 / lambda_0
 
+# Common theme
+common_theme <- theme_minimal(base_size = 11) +
+  theme(
+    plot.title = element_text(face = "bold", size = 10),
+    panel.grid.minor = element_blank()
+  )
+
 # Panel A: People
-p1 <- ggplot(df, aes(x = uncounted, y = p_value,
-    text = paste0("Uncounted: ±", uncounted, " people\nP-value: ", round(p_value, 4)))) +
-  geom_line(linewidth = 1, color = "#6ba4e7") +
-  geom_hline(yintercept = 0.05, linetype = "dashed", color = "#e74c3c", linewidth = 0.7) +
-  geom_vline(xintercept = crossover_05, linetype = "dotted", color = "gray50", linewidth = 0.7) +
+p1 <- ggplot(df, aes(x = uncounted, y = p_value)) +
+  geom_line(linewidth = 1, color = "#2c3e50") +
+  geom_hline(
+    yintercept = 0.05,
+    linetype = "dashed",
+    color = "#e74c3c",
+    linewidth = 0.7
+  ) +
+  geom_vline(
+    xintercept = crossover_05,
+    linetype = "dotted",
+    color = "gray50",
+    linewidth = 0.7
+  ) +
   scale_y_continuous(limits = c(0, 0.5), breaks = seq(0, 0.5, by = 0.1)) +
-  scale_x_continuous(breaks = seq(0, 2000, by = 500)) +
+  scale_x_continuous(breaks = sort(c(seq(0, 2000, by = 500), crossover_05))) +
   labs(
     title = "A. People potentially missed",
     x = "± people potentially uncounted",
     y = "P-value"
   ) +
-  theme_minimal(base_size = 11) +
-  theme(plot.title = element_text(face = "bold", size = 10), panel.grid.minor = element_blank())
+  common_theme
 
-ggplotly(p1, tooltip = "text") |>
-  layout(
-    title = list(text = "How many people would need to be missed for the decline to lose significance?", font = list(size = 13)),
-    annotations = list(
-      list(x = crossover_05, y = 0.05, text = paste0("~", crossover_05, " people"), showarrow = TRUE, arrowhead = 2, ax = 40, ay = -30, font = list(size = 11))
-    )
-  )
-```
-
-```{r, message=FALSE, warning=FALSE, echo=FALSE}
 # Panel B: Percent
-p2 <- ggplot(df, aes(x = pct_uncounted, y = p_value,
-    text = paste0("Uncounted: ±", round(pct_uncounted, 1), "% of count\nP-value: ", round(p_value, 4)))) +
-  geom_line(linewidth = 1, color = "#6ba4e7") +
-  geom_hline(yintercept = 0.05, linetype = "dashed", color = "#e74c3c", linewidth = 0.7) +
-  geom_vline(xintercept = crossover_05_pct, linetype = "dotted", color = "gray50", linewidth = 0.7) +
+p2 <- ggplot(df, aes(x = pct_uncounted, y = p_value)) +
+  geom_line(linewidth = 1, color = "#2c3e50") +
+  geom_hline(
+    yintercept = 0.05,
+    linetype = "dashed",
+    color = "#e74c3c",
+    linewidth = 0.7
+  ) +
+  geom_vline(
+    xintercept = crossover_05_pct,
+    linetype = "dotted",
+    color = "gray50",
+    linewidth = 0.7
+  ) +
   scale_y_continuous(limits = c(0, 0.5), breaks = seq(0, 0.5, by = 0.1)) +
-  scale_x_continuous(labels = function(x) paste0(round(x, 1), "%")) +
+  scale_x_continuous(
+    breaks = sort(c(seq(0, 20, by = 5), crossover_05_pct)),
+    labels = function(x) paste0(round(x, 1), "%")
+  ) +
   labs(
     title = "B. Percent of count potentially missed",
     x = "± % of 2022 count potentially uncounted",
     y = "P-value"
   ) +
-  theme_minimal(base_size = 11) +
-  theme(plot.title = element_text(face = "bold", size = 10), panel.grid.minor = element_blank())
+  common_theme
 
-ggplotly(p2, tooltip = "text") |>
-  layout(
-    annotations = list(
-      list(x = crossover_05_pct, y = 0.05, text = paste0("~", round(crossover_05_pct, 1), "%"), showarrow = TRUE, arrowhead = 2, ax = 40, ay = -30, font = list(size = 11))
-    )
+# Combine
+combined <- p1 +
+  p2 +
+  plot_annotation(
+    title = "How many people would need to be missed in the 2022 PIT for the 2022–2024 decline to lose significance?",
+    theme = theme(plot.title = element_text(face = "bold", size = 12))
   )
+
+print(combined)
 ```
 
 Russell's argument depends on the question of whether 2.4% undercounting — 230 people — is implausible. Of course it isn't.
