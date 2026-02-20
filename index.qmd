@@ -20,9 +20,8 @@ title: "Alex Bue"
 I'm a graduate student studying data science and international development at Stanford. Previously I earned my MBA from the University of Chicago as an Edwardson Civic Scholar. I used to work in homeless services and more recently was a consulting data scientist in the World Bank Group's Department for Outcomes. I'm interested in using technology and statistics to make humanitarian and development assistance more effective.
 
 ## Writing
-- **[Housing Investments ≠ Homelessness Reductions](writing/pit-count-statistics/)** - A statistical critique of Alameda County's claim that housing investments caused a drop in homelessness
-
-- **[Does Emergency Rental Assistance Prevent Homelessness?](writing/erap-evaluation/)** - A critical look at San Francisco's ERAP impact evaluation and what it means for a program to "work"
+- [Housing Investments ≠ Homelessness Reductions](writing/pit-count-statistics/)
+- [Does Emergency Rental Assistance Prevent Homelessness?](writing/erap-evaluation/)
 
 ## Projects
 - **Outcomes Target Map** - Built organization-wide dashboard in R Shiny to help World Bank Group track development targets across country portfolios
