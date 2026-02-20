@@ -143,108 +143,63 @@ $$
 U = \sqrt{(22,953 - 9,747) \times 3.84} = \sqrt{50,711} \approx 225
 $$
 
-That is: if roughly 225 people — about 2.3% of the 2022 count — were plausibly missed, the observed decline loses statistical significance.
+If roughly 225 people — about 2.3% of the 2022 count — were missed, the observed decline loses statistical significance. Is this plausible? 
+Alameda County is huge. The most common criticism of the PIT is that it undercounts homelessness. Of course it's plausible.
 
-Russell's argument depends on the question of whether 2.3% undercounting is implausible. Of course it isn't.
-
+<!--
 ```{r, message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
 library(ggplot2)
 library(dplyr)
 library(patchwork)
 
-# Observed counts
 x_2022 <- 9747
 x_2024 <- 9450
 diff <- x_2024 - x_2022
-
-# True rate centered at 2022 count
 lambda_0 <- x_2022
-
-# Vary the "uncounted" people from 0 to 2000
 uncounted <- seq(0, 2000, by = 10)
-
-# Convert to standard deviation of lambda
 sigma_lambda <- uncounted / 1.96
-
-# Compute variance of observed count under gamma-poisson
 var_x <- lambda_0 + sigma_lambda^2
 se_x <- sqrt(var_x)
-
-# Z-score and p-value
 z <- diff / se_x
 p_value <- 2 * pnorm(z)
 
-# Create data frame
 df <- data.frame(
   uncounted = uncounted,
   pct_uncounted = 100 * uncounted / lambda_0,
   p_value = p_value
 )
 
-# Find crossover point
 crossover_05 <- df$uncounted[which.min(abs(df$p_value - 0.05))]
 crossover_05_pct <- 100 * crossover_05 / lambda_0
 
-# Common theme
 common_theme <- theme_minimal(base_size = 11) +
-  theme(
-    panel.grid.minor = element_blank()
-  )
+  theme(panel.grid.minor = element_blank())
 
-# Panel A: People
 p1 <- ggplot(df, aes(x = uncounted, y = p_value)) +
   geom_line(linewidth = 1, color = "#2c3e50") +
-  geom_hline(
-    yintercept = 0.05,
-    linetype = "dashed",
-    color = "#e74c3c",
-    linewidth = 0.7
-  ) +
-  geom_vline(
-    xintercept = crossover_05,
-    linetype = "dotted",
-    color = "gray50",
-    linewidth = 0.7
-  ) +
+  geom_hline(yintercept = 0.05, linetype = "dashed", color = "#e74c3c", linewidth = 0.7) +
+  geom_vline(xintercept = crossover_05, linetype = "dotted", color = "gray50", linewidth = 0.7) +
   scale_y_continuous(limits = c(0, 0.5), breaks = seq(0, 0.5, by = 0.1)) +
   scale_x_continuous(breaks = sort(c(seq(0, 2000, by = 500), crossover_05))) +
-  labs(
-    x = "± people potentially uncounted",
-    y = "P-value"
-  ) +
+  labs(x = "± people potentially uncounted", y = "P-value") +
   common_theme
 
-# Panel B: Percent
 p2 <- ggplot(df, aes(x = pct_uncounted, y = p_value)) +
   geom_line(linewidth = 1, color = "#2c3e50") +
-  geom_hline(
-    yintercept = 0.05,
-    linetype = "dashed",
-    color = "#e74c3c",
-    linewidth = 0.7
-  ) +
-  geom_vline(
-    xintercept = crossover_05_pct,
-    linetype = "dotted",
-    color = "gray50",
-    linewidth = 0.7
-  ) +
+  geom_hline(yintercept = 0.05, linetype = "dashed", color = "#e74c3c", linewidth = 0.7) +
+  geom_vline(xintercept = crossover_05_pct, linetype = "dotted", color = "gray50", linewidth = 0.7) +
   scale_y_continuous(limits = c(0, 0.5), breaks = seq(0, 0.5, by = 0.1)) +
   scale_x_continuous(
     breaks = sort(c(seq(0, 20, by = 5), crossover_05_pct)),
     labels = function(x) paste0(round(x, 1), "%")
   ) +
-  labs(
-    x = "± % of 2022 count potentially uncounted",
-    y = "P-value"
-  ) +
+  labs(x = "± % of 2022 count potentially uncounted", y = "P-value") +
   common_theme
 
-# Combine
 combined <- p1 + p2
-
 print(combined)
 ```
+-->
 
 ## Causation is weak
 
