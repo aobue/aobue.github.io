@@ -119,6 +119,62 @@ header#title-block-header {
   text-decoration: underline;
 }
 
+/* Writing listing page */
+.quarto-listing {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.quarto-listing .listing-title {
+  color: #ffffff;
+}
+
+.quarto-listing .listing-description {
+  color: #e0e0e0;
+}
+
+.quarto-listing a {
+  color: #6ba4e7;
+}
+
+/* Blog post pages */
+.quarto-title-block .quarto-title {
+  color: #ffffff;
+}
+
+.quarto-title-meta {
+  color: #b0b0b0;
+}
+
+/* Code blocks in blog posts */
+div.sourceCode {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+}
+
+code {
+  color: #e0e0e0;
+}
+
+pre code {
+  color: #e0e0e0;
+}
+
+/* Tables in blog posts */
+.table {
+  color: #e0e0e0;
+}
+
+.table th {
+  color: #ffffff;
+  border-color: #444;
+}
+
+.table td {
+  border-color: #333;
+}
+
 @media (max-width: 968px) {
   .container {
     grid-template-columns: 1fr;

@@ -30,6 +30,10 @@ I'm a graduate student studying data science and international development at St
 
 - **Testing Modernization Theory with Asia Barometer** - Statistical analysis of survey data across eight Asian countries examining relationships between economic development and democratic attitudes (in progress)
 
+## Writing
+- **[Housing Investments ≠ Homelessness Reductions](writing/pit-count-statistics/)** - A statistical critique of Alameda County's claim that housing investments caused a drop in homelessness
+
+- **[Does Emergency Rental Assistance Prevent Homelessness?](writing/erap-evaluation/)** - A critical look at San Francisco's ERAP impact evaluation and what it means for a program to "work"
 
 :::
 :::
