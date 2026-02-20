@@ -11,7 +11,7 @@ Jonathan Russell, Director of Housing and Homelessness for Alameda County, is co
 
 ## The claim
 
-![Russell's LinkedIn post claiming housing investments caused homelessness reductions](russell-post.png){width=450}
+![](russell-post.png){width=450 fig-align="center"}
 
 But two things would need to be true for Russell's argument to hold. First, the PIT decrease must be larger than we'd expect by chance. Second, if it is, then the decrease must have been caused by spending and not something else.
 
@@ -125,7 +125,29 @@ $$
 z=\frac{-297}{\sqrt{9,747+U^2 / 3.84}}
 $$
 
-```{r, message=FALSE, warning=FALSE, echo=FALSE}
+Setting $z = -1.96$ (the two-tailed 5% threshold) and solving for $U$:
+
+$$
+-1.96 = \frac{-297}{\sqrt{9,747 + U^2/3.84}}
+$$
+
+$$
+\sqrt{9,747 + U^2/3.84} = \frac{297}{1.96} = 151.5
+$$
+
+$$
+9,747 + U^2/3.84 = 22,953
+$$
+
+$$
+U = \sqrt{(22,953 - 9,747) \times 3.84} = \sqrt{50,711} \approx 225
+$$
+
+That is: if roughly 225 people — about 2.3% of the 2022 count — were plausibly missed, the observed decline loses statistical significance.
+
+Russell's argument depends on the question of whether 2.3% undercounting is implausible. Of course it isn't.
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
 library(ggplot2)
 library(dplyr)
 library(patchwork)
@@ -166,7 +188,6 @@ crossover_05_pct <- 100 * crossover_05 / lambda_0
 # Common theme
 common_theme <- theme_minimal(base_size = 11) +
   theme(
-    plot.title = element_text(face = "bold", size = 10),
     panel.grid.minor = element_blank()
   )
 
@@ -188,7 +209,6 @@ p1 <- ggplot(df, aes(x = uncounted, y = p_value)) +
   scale_y_continuous(limits = c(0, 0.5), breaks = seq(0, 0.5, by = 0.1)) +
   scale_x_continuous(breaks = sort(c(seq(0, 2000, by = 500), crossover_05))) +
   labs(
-    title = "A. People potentially missed",
     x = "± people potentially uncounted",
     y = "P-value"
   ) +
@@ -215,24 +235,16 @@ p2 <- ggplot(df, aes(x = pct_uncounted, y = p_value)) +
     labels = function(x) paste0(round(x, 1), "%")
   ) +
   labs(
-    title = "B. Percent of count potentially missed",
     x = "± % of 2022 count potentially uncounted",
     y = "P-value"
   ) +
   common_theme
 
 # Combine
-combined <- p1 +
-  p2 +
-  plot_annotation(
-    title = "How many people would need to be missed in the 2022 PIT for the 2022–2024 decline to lose significance?",
-    theme = theme(plot.title = element_text(face = "bold", size = 12))
-  )
+combined <- p1 + p2
 
 print(combined)
 ```
-
-Russell's argument depends on the question of whether 2.4% undercounting — 230 people — is implausible. Of course it isn't.
 
 ## Causation is weak
 

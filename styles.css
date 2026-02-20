@@ -148,6 +148,23 @@ body:has(.container) header#title-block-header {
   color: #b0b0b0;
 }
 
+/* Center images and figures in blog posts */
+.quarto-figure {
+  text-align: center;
+}
+
+.cell-output-display {
+  text-align: center;
+}
+
+.cell-output-display img {
+  margin: 0 auto;
+}
+
+.quarto-figure-center figcaption {
+  display: none;
+}
+
 /* Code blocks in blog posts */
 div.sourceCode {
   background-color: #2a2a2a;
