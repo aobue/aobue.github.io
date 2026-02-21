@@ -37,3 +37,7 @@ I wonder if the impact evaluation audience actually read the study, or even the 
 In computer science theory, or formal logic, or whatever, conditional statements are said to be "vacuously" true if the antecedent cannot be satisfied. I do not have children and do not own cats, so the statement "I love my children" is vacuously true. Similarly, the claim that ERAP works is the conditional: "If a participant is headed for homelessness, then ERAP prevents it". But this is vacuously true for the 92% of people who were never going to become homeless anyway, according to the study. The statement cannot be proven false, so by default, it is considered true.
 
 When we talk about programs working, what we mean and hope is they were the difference between a better and worse outcome: ERAP works because, had it not been for emergency rental assistance, families would become homeless. We almost certainly do not mean they work because the circumstances they mean to prevent rarely happen — we do not mean they work vacuously.
+
+## Works cited
+
+Imbens, Guido W., and Donald B. Rubin. *Causal Inference for Statistics, Social, and Biomedical Sciences: An Introduction*. Cambridge University Press, 2015.
