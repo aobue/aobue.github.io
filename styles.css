@@ -141,7 +141,7 @@ body:has(.container) header#title-block-header {
 
 /* Blog post pages */
 body:not(:has(.container)) .content {
-  max-width: 600px;
+  max-width: 48em;
   margin: 0 auto;
   padding: 2rem;
 }
